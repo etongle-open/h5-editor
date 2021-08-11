@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="mainPanel"
     class="main-panel"
     :style="{
       width: canvasSize.width + 'px',
@@ -39,6 +40,7 @@ import { mapState, mapMutations } from '../poster.vuex'
 import widgetContainer from './widgets/widgetContainer'
 import backgroundWidget from './widgets/backgroundWidget'
 import drawRectWidget from './assistWidgets/drawRectWidget'
+
 export default {
   components: {
     widgetContainer,
@@ -56,7 +58,6 @@ export default {
       'assistWidgets',
       'pageTitle'
     ])
-
   }
 }
 </script>

@@ -1,26 +1,18 @@
 <template>
   <div class="functional-bar">
     <ul>
-      <li class="github">
-        <el-tooltip
-          effect="dark"
-          content="希望大佬们能给我点颗星⭐"
-          placement="bottom"
-          transition="el-zoom-in-center"
-        >
-          <span>
-            <a href="https://github.com/a7650/h5-editor" target="blank">GitHub</a>
-          </span>
-        </el-tooltip>
-      </li>
-      <li @click="savePage">
-        <i class="el-icon-upload" />
-        <span>
-          <el-badge is-dot :hidden="!isUnsavedState">
-            {{ savePageLoading ? '正在保存' : '保存页面' }}
-          </el-badge>
-        </span>
-      </li>
+<!--      <li @click="downloadImg">-->
+<!--        <i class="el-icon-download" />-->
+<!--        <span>下载图片</span>-->
+<!--      </li>-->
+<!--      <li @click="savePage">-->
+<!--        <i class="el-icon-upload" />-->
+<!--        <span>-->
+<!--          <el-badge is-dot :hidden="!isUnsavedState">-->
+<!--            {{ savePageLoading ? '正在保存' : '保存页面' }}-->
+<!--          </el-badge>-->
+<!--        </span>-->
+<!--      </li>-->
       <li @click="closeEditor">
         <i class="el-icon-circle-close" />
         <span>关闭编辑器</span>
@@ -44,6 +36,10 @@ export default {
     ...mapActions(['saveActivityPageConfig']),
     closeEditor() {
       this.$router.back()
+    },
+    downloadImg() {
+      debugger
+      this.$emit('clickGeneratePicture', true)
     },
     savePage() {
       if (this.savePageLoading) return

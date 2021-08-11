@@ -73,12 +73,12 @@ export default {
           name: '文本',
           icon: 'icon-text'
         },
-        {
-          type: 'rect',
-          component: 'rect-widget',
-          name: '矩形',
-          icon: 'icon-rect'
-        },
+        // {
+        //   type: 'rect',
+        //   component: 'rect-widget',
+        //   name: '矩形',
+        //   icon: 'icon-rect'
+        // },
         ...pluginWidgets
       ]
     }

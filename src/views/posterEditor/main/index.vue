@@ -2,14 +2,14 @@
   <div ref="main" class="poster-editor-main" @contextmenu.prevent="">
     <div ref="mainPanelScrollContent" class="main-panel-scroll-content">
       <div class="main-panel-contaienr">
-        <main-panel ref="mainPanel" @openContextmenu="openContextmenu" />
+        <main-panel id="mainPanel" ref="mainPanel" @openContextmenu="openContextmenu" />
       </div>
     </div>
     <div class="mask" :style="maskStyle" />
     <ruler-component />
     <bottom-bar />
     <!-- 功能栏 -->
-    <functional-bar />
+<!--    <functional-bar />-->
     <custom-contextmenu
       v-if="contextmenuVisible"
       v-clickoutside="closeContextmenu"
@@ -28,7 +28,7 @@ import { mapMutations, mapState } from 'poster/poster.vuex'
 import bottomBar from './bottomBar'
 import customContextmenu from 'poster/components/customContextmenu'
 import { clickoutside } from 'poster/poster.directives'
-import functionalBar from './functionalBar'
+// import functionalBar from './functionalBar'
 
 import BScroll from '@better-scroll/core'
 import MouseWheel from '@better-scroll/mouse-wheel'
@@ -38,8 +38,8 @@ export default {
     mainPanel,
     rulerComponent,
     bottomBar,
-    customContextmenu,
-    functionalBar
+    customContextmenu
+    // functionalBar
   },
   directives: { clickoutside },
   data() {

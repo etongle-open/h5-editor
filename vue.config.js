@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = 'poster'
+const name = '海报设计器'
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 const webpackConfig = {

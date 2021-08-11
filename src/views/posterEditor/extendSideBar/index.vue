@@ -70,17 +70,17 @@
           <i class="el-icon-document-copy" />
         </div>
       </el-tooltip>
+<!--      <el-tooltip-->
+<!--        effect="dark"-->
+<!--        content="生成H5代码（Beta）"-->
+<!--        placement="left"-->
+<!--        transition="el-zoom-in-center"-->
+<!--      >-->
+<!--        <div class="item" @click="exportH5">-->
+<!--          <i class="icon-h5" />-->
+<!--        </div>-->
+<!--      </el-tooltip>-->
       <el-tooltip
-        effect="dark"
-        content="生成H5代码（Beta）"
-        placement="left"
-        transition="el-zoom-in-center"
-      >
-        <div class="item" @click="exportH5">
-          <i class="icon-h5" />
-        </div>
-      </el-tooltip>
-      <!-- <el-tooltip
         effect="dark"
         content="生成海报"
         placement="left"
@@ -89,7 +89,7 @@
         <div class="item" @click="exportPoster">
           <i class="icon-poster" />
         </div>
-      </el-tooltip> -->
+      </el-tooltip>
       <el-tooltip
         effect="dark"
         content="快捷键参考"
@@ -177,7 +177,7 @@ export default {
       ExportService.exportH5()
     },
     exportPoster() {
-      ExportService.exportPoster()
+      ExportService.exportPosterByDoc()
     },
     // 打开图层面板
     openLayer() {

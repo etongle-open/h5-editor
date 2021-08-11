@@ -1,6 +1,7 @@
 import store from '@/store'
 import { saveAs } from 'file-saver'
 import { createDom, domToImg, base64ToBlob } from 'poster/utils'
+import html2canvas from 'html2canvas'
 
 /**
  * @returns {WidgetItem[]}
@@ -74,6 +75,14 @@ export default class ExportService {
         // document.body.appendChild(containerNode)
         domToImg(containerNode, { width: canvasSize.width, height: canvasSize.height }).then(res => {
             saveAs(base64ToBlob(res.src), 'poster.png')
+        })
+    }
+    static exportPosterByDoc() {
+        const canvas = document.querySelector('#mainPanel')
+        html2canvas(canvas).then(canvas => {
+            // 转成图片，生成图片地址
+            const imgUrl = canvas.toDataURL('image/png')
+            saveAs(base64ToBlob(imgUrl), 'poster.png')
         })
     }
 }

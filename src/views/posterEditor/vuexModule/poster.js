@@ -27,7 +27,7 @@ function getState() {
         posterItems: [], // 组件列表
         activeItems: [], // 当前选中的组件
         assistWidgets: [], // 辅助组件
-        layerPanelOpened: true, // 是否打开图层面板
+        layerPanelOpened: false, // 是否打开图层面板
         referenceLineOpened: true, // 是否打开参考线
         copiedWidgets: null, // 当前复制的组件 WidgetItem[]
         referenceLine: { // 参考线,用户定义的参考线
